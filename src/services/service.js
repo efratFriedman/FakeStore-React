@@ -1,3 +1,3 @@
-export function getProducts() {
-    return [{ title: "Mac" }];
-}
+export const getProducts = async () => {
+  return [{ title: "Mac" }];
+};

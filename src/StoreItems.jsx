@@ -5,9 +5,11 @@ const StoreItems = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        const products = getProducts();
-        setItems(products);
+        getProducts().then((products) => {
+            setItems(products);
+        });
     }, []);
+
 
     useEffect(() => {
         console.log("Items changed:", items);
